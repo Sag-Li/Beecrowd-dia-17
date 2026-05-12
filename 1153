@@ -1,0 +1,15 @@
+import java.util.*
+
+fun fatorial(n: Int): Int{
+    if (n == 1){
+        return 1
+    }
+    return n * fatorial(n = n - 1)
+}
+fun main(args: Array<String>) {
+
+    val N = readLine()!!.toInt()
+    if (0 < N && N < 13){ 
+        println(fatorial(N))
+    }
+}
