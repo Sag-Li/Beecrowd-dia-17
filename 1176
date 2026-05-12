@@ -1,0 +1,21 @@
+import java.util.*
+fun main(args: Array<String>) {
+    
+    val fibonacci = LongArray(61)
+    fibonacci[0] = 0L
+    fibonacci[1] = 1L
+
+    for (posicao in 2..60) {
+        fibonacci[posicao] = fibonacci[posicao - 1] + fibonacci[posicao - 2]
+    }
+
+    val linhaQuantidade = readLine() ?: return
+    val quantidadeDeTestes = linhaQuantidade.trim().toInt()
+
+    repeat(quantidadeDeTestes) {
+        val linhaN = readLine() ?: ""
+        val n = linhaN.trim().toInt()
+        
+        println("Fib($n) = ${fibonacci[n]}")
+    }
+}
