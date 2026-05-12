@@ -1,0 +1,18 @@
+fun fatorial(n: Int): Long {
+    if (n <= 1) {
+        return 1
+    }
+    
+    val resultadoAnterior = fatorial(n - 1)
+    val resultadoAtual = n * resultadoAnterior
+    
+    return resultadoAtual
+}
+
+fun main() {
+    print("Digite um número")
+    val numero = readln().toInt()
+    val resultadoFinal = fatorial(numero)
+    
+    println("O fatorial de $numero é: $resultadoFinal")
+}
