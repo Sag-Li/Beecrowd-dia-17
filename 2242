@@ -1,0 +1,18 @@
+import java.util.*
+import java.util.Scanner
+
+fun main(args: Array<String>) {
+    
+    val scanner = Scanner(System.`in`)
+    if (scanner.hasNext()) {
+        val risada = scanner.next()
+        
+        val vogais = risada.filter { it in "aeiou" }
+        
+        if (vogais == vogais.reversed()) {
+            println("S")
+        } else {
+            println("N")
+        }
+    }
+}
